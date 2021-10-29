@@ -47,6 +47,7 @@ const Button = styled.button`
 
 function App() {
   const [frase, setFrase] = useState({});
+  const [error, setError] = useState(false);
 
   async function consultarAPI() {
     try {
@@ -56,7 +57,8 @@ function App() {
       const [objFrase] = data;
       setFrase(objFrase);
     } catch (error) {
-      console.log(error);
+      setError(true);
+      alert(`No se puedieron extraer los datos`);
     }
   }
 
