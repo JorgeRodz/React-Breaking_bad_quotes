@@ -1,5 +1,6 @@
 {
   "name": "breaking-bad",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "build-and-docs": "react-scripts build && node create-docs.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
